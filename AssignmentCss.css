@@ -1,0 +1,202 @@
+:root {
+  font-size: 16px; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+div#backgorundimage
+  {
+    z-index: 1;
+    background-size: cover;
+  }
+
+#backgroundimage:before
+  {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-image: url(background.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: 0.4;
+    filter:alpha(opacity=60);
+    height:100%;
+    width:100%;
+  }
+
+.main{
+  display: block;
+   z-index:-1;
+   opacity: 1;
+   filter:alpha(opacity=100);
+   font-family: "Times New Roman", Times, serif;
+   margin-left: 15px;
+   margin-right: 15px;
+   /*margin-top: 20px;*/
+   margin-top: 10vh;
+}
+
+.firstPage{
+  background-color: blue;
+  background-image: linear-gradient(#3F51B5,white);
+  height: 100vh;
+}
+
+.welcomeHeading{
+  text-align: center;
+  padding-top: 300px;
+  font-size: 5.5rem;
+}
+
+.belowPrevious{
+  text-align: center;
+  padding-top: 4px;
+  font-size: 3rem;
+}
+
+.scrollDown{
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.5rem;
+}
+
+.intro{
+  float:left;
+  font-size: 1.5rem;
+  /*padding-left: 300px;*/
+  line-height: 30px;
+}
+
+div#welcomeChild2{
+	background: #3F51B5;
+    width: 90vw;
+    height: 550px;
+}
+div#welcomeChild3{
+	background: #a0d9e2;
+    width: 90vw;
+    height: 250px;
+    padding-left: 40px;
+    margin-left: 40px;
+    margin-top: 60px;
+    box-shadow: 0 0 18px 4px black;
+}
+
+h1#firstHeading{
+	text-align: left;
+    font-size: 5rem; /*Initially I used 80px as the font size, using rem i changed it to 5rem*/
+    padding-top: 26px;
+    padding-left: 38px;
+    margin-bottom: 32px;
+}
+
+h2#subHeading{
+	padding-left: 40px;
+    font-size: 4rem; /*earlier used a font size of 60px, changed after using rem*/
+    padding-top: 38px;
+    transition: box-shadow 0.3s linear 0.1s;
+}
+div#child1{
+	float:left;
+	font-size: 1.5rem; /*24px was the initial value*/
+  line-height: 30px; /*for line spacing*/
+}
+
+div#newPara{
+	float:right;
+	font-size: 1.5rem;
+	/*padding-left: 300px;*/
+  line-height: 30px;
+	width: 650px; 
+}
+
+div#img {
+    box-shadow: 0 0 18px 4px black;
+    float: left;
+    margin-left: 100px;
+}
+
+div#contactDets{
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+a:link{
+  color:red;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: hotpink;
+    cursor: pointer;
+}
+a:active {
+    color: blue;
+}
+
+.des{
+  /*display: flex;*/
+}
+
+@media only screen and (max-width: 480px)
+{
+  div#welcomeChild3{
+      width : 60vw;
+      height: 25vh;
+  }
+  h2#subHeading{
+      font-size: 3rem;
+  }
+  div#newPara{
+  font-size: 1.5rem;
+  line-height: 30px;
+  flex-wrap: wrap;
+  width: 100%; 
+  }
+div#child1{
+  font-size: 1.5rem; 
+  line-height: 30px; 
+}
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px)
+{
+    div#welcomeChild3{
+      width : 75vw;
+      height: 25vh;
+  }
+    h2#subHeading{
+      font-size: 3rem;
+  }
+    div#newPara{
+  font-size: 1.5rem;
+  margin-left: 50px;
+  line-height: 30px;
+  width: 500px; /*causes a little issue, without defining width, the full text is not diplayed. This statement shows proper text only at 480px, acceptable for mobile screens.*/
+}
+div#child1{
+  font-size: 1.5rem; 
+  line-height: 30px; 
+}
+/*flex gives me undesireable results*/
+/*.main{
+  display: flex;
+  flex-direction: column;
+}
+.des{
+    flex-direction: column;
+  }*/
+}
+
+@media screen and (min-width: 767px)
+{
+
+}
